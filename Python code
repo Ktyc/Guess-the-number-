@@ -1,0 +1,19 @@
+
+def guess(low_end, high_end, number):
+  guess = int(input(f'Guess a number between {low_end} and {high_end}: '))
+  if guess >= low_end and guess <= high_end:
+      for i in range (high_end - low_end):
+        if guess == number:
+          end_game = print(f"Congratulations, the number is indeed {guess}.")
+          return end_game
+          
+        elif guess > number:
+          guess = high_end
+      
+          guess = int(input("Guess a lower number: "))
+        else:
+          guess = low_end 
+          guess = int(input("Guess a higher number: "))
+
+guess(0, 100, 67)
+        
